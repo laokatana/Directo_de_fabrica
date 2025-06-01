@@ -1,0 +1,88 @@
+/* MOBILE FIRST */
+
+.home-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  color: rgb(233, 216, 216);
+  text-align: center;
+  padding: 0 1rem;
+  top: 25%;
+
+}
+
+.home-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: transparent;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: inline-block;
+  border: solid 1px white;
+}
+
+.cta-button:hover {
+  background-color: #f1e682;
+  border: solid 1px #f1e682;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  color: black;
+}
+
+/* TABLET Y DESKTOP */
+
+@media (min-width: 768px) {
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .home-content p {
+    font-size: 1.25rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-content {
+    padding: 0 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content p {
+    font-size: 1.5rem;
+  }
+}
