@@ -9,7 +9,6 @@ async function loadComponent(containerId, path, cssPath, jsPath) {
       document.head.appendChild(link);
     });
   }
-  
 
   const html = await fetch(path).then((res) => res.text());
   document.getElementById(containerId).innerHTML = html;
