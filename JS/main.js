@@ -41,3 +41,17 @@ loadComponent(
   "./components/products/products.css",
   "./components/products/products.js"
 );
+
+loadComponent(
+  "about-container",
+  "./components/about/about.html",
+  "./components/about/about.css",
+  "./components/about/about.js"
+);
+
+loadComponent(
+  "contact-container",
+  "./components/footer-contacto/contacto.html",
+  "./components/footer-contacto/contacto.css",
+  "./components/footer-contacto/contacto.js"
+);

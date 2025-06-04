@@ -12,3 +12,9 @@ navItems.forEach((item) => {
     document.getElementById("nav-links").classList.remove("open");
   });
 });
+
+loadComponent(
+  "cart-container",
+  "./components/cart/cart.html",
+  "./components/cart/cart.css"
+);
