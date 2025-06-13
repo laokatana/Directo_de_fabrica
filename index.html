@@ -10,16 +10,203 @@
       href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
       rel="stylesheet"
     />
-    <script src="JS/main.js" defer></script>
+    <script type="module" src="./JS/main.js" defer></script>
     <title>Directo de Fabrica</title>
   </head>
   <body class="julius-sans-one-regular">
-    <div id="navbar-container"></div>
-    <div id="home-container"></div>
-    <div id="about-container"></div>
-    <div id="products-container"></div>
-    <div id="contact-container"></div>
+    <!------------------------- NAVBAR ----------------------------------------------->
 
+    <nav class="navbar">
+      <div class="logo">Directo de Fábrica</div>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#products">Productos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <button class="cart-toggle" id="cart-toggle">
+        🛒 <span id="cart-count">0</span>
+      </button>
+    </nav>
+
+    <main>
+      <!------------------HOME--------------------------------------------------------->
+      <section class="home-hero" id="home">
+        <video autoplay muted loop playsinline class="bg-video">
+          <source src="/assets/videos/Video1.mp4" type="video/mp4" />
+          Tu navegador no soporta videos en HTML5.
+        </video>
+
+        <div class="home-content">
+          <h1 class="home-title">Directo de fabrica</h1>
+          <p class="home-description">
+            Respaldos unicos, directo desde el taller.
+          </p>
+          <a href="#products" class="cta-button">Ver Productos</a>
+        </div>
+      </section>
+
+      <!------------------ABOUT--------------------------------------------------------->
+      <section class="about-section" id="about">
+        <video autoplay muted loop playsinline class="about-bg-video">
+          <source
+            src="/assets/videos/Coverr-Putting-Wood-On-A-Machine-8859-1080P.mp4"
+            type="video/mp4"
+          />
+          Tu navegador no soporta videos en HTML5.
+        </video>
+
+        <div class="about-content">
+          <h2 class="about-title fade-title">Sobre Nosotros</h2>
+          <p class="about-description fade-paragraph">
+            Con nuestros productos nos proponemos llegar a cada hogar con lo
+            esencial para un buen descanso: un colchón y un respaldo que brinden
+            confort, estilo y durabilidad. Ofrecemos una línea cuidadosamente
+            seleccionada de
+            <strong>respaldos de madera</strong>, <strong>sommieres</strong> y
+            <strong>almohadas</strong>, fabricados con materiales de alta
+            calidad y terminaciones que garantizan
+            <strong>comodidad y resistencia</strong>. Nuestro compromiso está
+            centrado en la <strong>excelencia del producto</strong> y la
+            <strong>satisfacción de cada cliente</strong>.
+            <strong
+              >Hecho en nuestra mueblería y directo de fábrica, para que tu
+              descanso sea tan auténtico como nuestro trabajo.</strong
+            >
+          </p>
+          <a href="#products" class="about-button">Ver Productos</a>
+        </div>
+      </section>
+
+      <!------------------PRODUCTS--------------------------------------------------------->
+      <section class="products-section" id="products">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <img
+              src="/assets/pictures/Grande/respaldo grande dos plazas ecocuero blanco.jpeg"
+              alt="Respaldo de madera modelo A"
+              class="product-img"
+            />
+            <h3 class="product-title">Respaldo Modelo A</h3>
+            <p class="product-description">
+              Respaldo artesanal de madera maciza, 140cm.
+            </p>
+            <span class="product-price">$18.000</span>
+            <button class="add-to-cart-btn">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="/assets/pictures/Grande/respaldo grande dos plazas canelones.jpeg"
+              alt="respaldo grande dos plazas canelones"
+              class="product-img"
+            />
+            <h3 class="product-title">Respaldo Modelo B</h3>
+            <p class="product-description">
+              Diseño moderno con acabado mate, 160cm.
+            </p>
+            <span class="product-price">$22.500</span>
+            <button class="add-to-cart-btn">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="/assets/pictures/Grande/respaldo grande dos plazas chenille negro.jpeg"
+              alt="respaldo grande dos plazas chenille negro"
+              class="product-img"
+            />
+            <h3 class="product-title">Respaldo Modelo B</h3>
+            <p class="product-description">
+              Diseño moderno con acabado mate, 160cm.
+            </p>
+            <span class="product-price">$22.500</span>
+            <button class="add-to-cart-btn">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="/assets/pictures/mediano/respaldo una plaza y media chenille.jpeg"
+              alt="Respaldo de madera modelo B"
+              class="product-img"
+            />
+            <h3 class="product-title">Respaldo Modelo B</h3>
+            <p class="product-description">
+              Diseño moderno con acabado mate, 160cm.
+            </p>
+            <span class="product-price">$22.500</span>
+            <button class="add-to-cart-btn">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="/assets/pictures/chico/respaldorosa.jpeg"
+              alt="Respaldo de madera modelo B"
+              class="product-img"
+            />
+            <h3 class="product-title">Respaldo Modelo B</h3>
+            <p class="product-description">
+              Diseño moderno con acabado mate, 160cm.
+            </p>
+            <span class="product-price">$22.500</span>
+            <button class="add-to-cart-btn">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="/assets/pictures/almohada clasica.jpeg"
+              alt="Respaldo de madera modelo B"
+              class="product-img"
+            />
+            <h3 class="product-title">Respaldo Modelo B</h3>
+            <p class="product-description">
+              Diseño moderno con acabado mate, 160cm.
+            </p>
+            <span class="product-price">$22.500</span>
+            <button class="add-to-cart-btn">Agregar al carrito</button>
+          </div>
+
+          <!-- Más cards... -->
+        </div>
+      </section>
+
+      <!------------------CONTACT--------------------------------------------------------->
+      <section class="contact-section" id="contact">
+        <h2>Contacto</h2>
+        <p>¿Tenés alguna consulta o querés hacer un pedido? Escribinos:</p>
+        <form class="contact-form">
+          <input type="text" placeholder="Tu nombre" required />
+          <input type="email" placeholder="tu@email.com" required />
+          <textarea
+            rows="5"
+            placeholder="Escribí tu mensaje.."
+            required
+          ></textarea>
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </section>
+    </main>
+    <!----------------------CART SIDEBAR--------------------------------------------------------->
+    <div class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h2>Tu Carrito</h2>
+        <button id="close-cart">X</button>
+      </div>
+      <div class="cart-content">
+        <p>Tu carrito está vacío</p>
+      </div>
+    </div>
+
+    <!------------------FOOTER--------------------------------------------------------->
+    <footer class="footer">
+      <p>&copy; 2025 Directo de Fábrica. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="#home">Inicio</a>
+        <a href="#products">Productos</a>
+        <a href="#about">Nosotros</a>
+        <a href="#contact">Contacto</a>
+      </div>
+    </footer>
   </body>
-
 </html>
