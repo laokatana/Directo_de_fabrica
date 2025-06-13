@@ -6,6 +6,7 @@ export default function setupCart() {
   // 1. Toggle con el botón 🛒
   cartToggle.addEventListener("click", () => {
     cartSidebar.classList.toggle("open");
+   
   });
 
   // 3. Cierre con la tecla ESC
@@ -30,12 +31,19 @@ export function buyCartCount() {
   const cartSidebar = document.getElementById("cart-sidebar");
   const cartContent = cartSidebar.querySelector(".cart-content");
   const closeCartBtn = document.getElementById("close-cart");
-  const cartToggle = document.getElementById("cart-toggle"); // botón del navbar 🛒
+  const cartToggle = document.getElementById("cart-toggle");
   const cartCount = document.getElementById("cart-count");
 
   let cartItems = [];
 
-  // Mostrar/ocultar carrito
+  // === Cargar carrito desde localStorage al iniciar ===
+  const savedCart = localStorage.getItem("cartItems");
+  if (savedCart) {
+    cartItems = JSON.parse(savedCart);
+    renderCart();
+  }
+
+  // === Mostrar/ocultar carrito ===
   cartToggle.addEventListener("click", () => {
     cartSidebar.classList.add("open");
     renderCart();
@@ -45,13 +53,26 @@ export function buyCartCount() {
     cartSidebar.classList.remove("open");
   });
 
-  // Agregar producto al carrito
+  // === Cerrar al hacer clic fuera del sidebar ===
+  document.addEventListener("click", (e) => {
+    if (!cartSidebar.contains(e.target) && !cartToggle.contains(e.target)) {
+      cartSidebar.classList.remove("open");
+    }
+  });
+
+  // === Agregar producto ===
   function addToCart(product) {
     cartItems.push(product);
+    saveCart();
     renderCart();
   }
 
-  // Renderizar el carrito
+  // === Guardar en localStorage ===
+  function saveCart() {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }
+
+  // === Renderizar carrito ===
   function renderCart() {
     cartContent.innerHTML = "";
 
@@ -66,12 +87,17 @@ export function buyCartCount() {
 
     cartItems.forEach((item, index) => {
       const li = document.createElement("li");
-      li.textContent = `${item.nombre} - $${item.precio}`;
+      li.classList.add("cart-item");
+      li.innerHTML = `<span>${item.nombre} - $${item.precio}</span>`;
 
       const removeBtn = document.createElement("button");
-      removeBtn.textContent = "X";
+      removeBtn.textContent = "✕";
+      removeBtn.classList.add("btn-remove");
+
       removeBtn.addEventListener("click", () => {
+        
         cartItems.splice(index, 1);
+        saveCart();
         renderCart();
       });
 
@@ -85,16 +111,20 @@ export function buyCartCount() {
     // Total
     const totalEl = document.createElement("p");
     totalEl.textContent = `Total: $${total.toFixed(2)}`;
+    totalEl.style.fontWeight = "bold";
     cartContent.appendChild(totalEl);
 
     // Botón de WhatsApp
     const checkoutBtn = document.createElement("button");
-    checkoutBtn.textContent = "Finalizar pedido por WhatsApp";
+    checkoutBtn.textContent = "FINALIZAR PEDIDO POR WHATSAPP";
+    checkoutBtn.classList.add("btn-whatsapp");
+
     checkoutBtn.addEventListener("click", () => {
       const mensaje = cartItems
         .map((item) => `- ${item.nombre} ($${item.precio})`)
         .join("%0A");
-      const whatsappMsg = `Hola! Quiero pedir:%0A${mensaje}%0A%0ATotal: $${total.toFixed(
+
+      const whatsappMsg = `Hola! me gustaria saber si hay stock y que colores tienen para efectuar la compra de los siguientes productos:%0A${mensaje}%0A%0ATotal: $${total.toFixed(
         2
       )}`;
       window.open(`https://wa.me/5491130510931?text=${whatsappMsg}`, "_blank");
@@ -102,13 +132,14 @@ export function buyCartCount() {
 
     cartContent.appendChild(checkoutBtn);
 
-    // Actualizar contador en el ícono del navbar
+    // Actualizar ícono carrito
     cartCount.textContent = cartItems.length;
   }
 
-  // Exponer para uso externo
+  // Exponer para las tarjetas de producto
   window.addToCart = addToCart;
 
+  // Escuchar botones
   document.querySelectorAll(".product-card").forEach((card) => {
     const title = card.querySelector(".product-title").textContent;
     const priceText = card.querySelector(".product-price").textContent;
