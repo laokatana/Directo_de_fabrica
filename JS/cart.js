@@ -99,7 +99,7 @@ export function buyCartCount() {
       const whatsappMsg = `Hola! me gustaria saber si hay stock y que colores tienen para efectuar la compra de los siguientes productos:%0A${mensaje}%0A%0ATotal: $${total.toFixed(
         2
       )}`;
-      window.open(`https://wa.me/5491130510931?text=${whatsappMsg}`, "_blank");
+      window.open(`https://wa.me/5491131786313?text=${whatsappMsg}`, "_blank");
     });
 
     cartContent.appendChild(checkoutBtn);
