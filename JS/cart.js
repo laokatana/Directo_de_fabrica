@@ -6,22 +6,11 @@ export default function setupCart() {
   // 1. Toggle con el botón 🛒
   cartToggle.addEventListener("click", () => {
     cartSidebar.classList.toggle("open");
-   
   });
 
-  // 3. Cierre con la tecla ESC
+  // 2. Cierre con la tecla ESC
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      cartSidebar.classList.remove("open");
-    }
-  });
-
-  // 4. Cierre si hacés clic fuera del carrito
-  document.addEventListener("click", (e) => {
-    const isClickInsideCart = cartSidebar.contains(e.target);
-    const isClickOnToggle = cartToggle.contains(e.target);
-
-    if (!isClickInsideCart && !isClickOnToggle) {
       cartSidebar.classList.remove("open");
     }
   });
@@ -30,10 +19,9 @@ export default function setupCart() {
 export function buyCartCount() {
   const cartSidebar = document.getElementById("cart-sidebar");
   const cartContent = cartSidebar.querySelector(".cart-content");
-  const closeCartBtn = document.getElementById("close-cart");
-  const cartToggle = document.getElementById("cart-toggle");
   const cartCount = document.getElementById("cart-count");
 
+  
   let cartItems = [];
 
   // === Cargar carrito desde localStorage al iniciar ===
@@ -44,21 +32,6 @@ export function buyCartCount() {
   }
 
   // === Mostrar/ocultar carrito ===
-  cartToggle.addEventListener("click", () => {
-    cartSidebar.classList.add("open");
-    renderCart();
-  });
-
-  closeCartBtn.addEventListener("click", () => {
-    cartSidebar.classList.remove("open");
-  });
-
-  // === Cerrar al hacer clic fuera del sidebar ===
-  document.addEventListener("click", (e) => {
-    if (!cartSidebar.contains(e.target) && !cartToggle.contains(e.target)) {
-      cartSidebar.classList.remove("open");
-    }
-  });
 
   // === Agregar producto ===
   function addToCart(product) {
@@ -95,7 +68,6 @@ export function buyCartCount() {
       removeBtn.classList.add("btn-remove");
 
       removeBtn.addEventListener("click", () => {
-        
         cartItems.splice(index, 1);
         saveCart();
         renderCart();
