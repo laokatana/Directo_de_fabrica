@@ -3,8 +3,7 @@ import about from './about.js';
 import setupCart from './cart.js';
 import { buyCartCount } from './cart.js';
 
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   setupNavbar();
   setupCart();
   about();
