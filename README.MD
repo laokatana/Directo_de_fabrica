@@ -71,7 +71,7 @@ Implementar búsqueda en tiempo real
 Integracion de mercado pago
 
 👨‍💻 Desarrollador
-Lao Larragueta - Frontend Developer
+Lao Larragueta - Developer
 https://www.linkedin.com/in/lao-larragueta/
 https://lao-larragueta.netlify.app/
 https://github.com/laokatana
