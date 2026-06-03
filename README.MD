@@ -73,7 +73,9 @@ Integracion de mercado pago
 👨‍💻 Desarrollador
 Lao Larragueta - Developer
 https://www.linkedin.com/in/lao-larragueta/
+
 https://lao-larragueta.netlify.app/
+
 https://github.com/laokatana
 
 📄 Licencia
