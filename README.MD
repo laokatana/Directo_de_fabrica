@@ -1,74 +1,71 @@
-Tienda Online - Directo de fabrica
-Respaldos, Sommiers y Almohadas Premium
+# **Lorenzo**
+
+Tienda online para la exhibición y comercialización de productos de descanso de la marca **Lorenzo**.
+
+## Demo
 
 https://directo-de-fabrica.netlify.app/
 
-Descripción
-Dormitex es una tienda online especializada en productos de descanso de alta calidad, desarrollada con tecnologías frontend puras:
+---
 
-Respaldos personalizables
+# Descripción
 
-Sommiers de materiales premium
+Directo de Fábrica es una tienda online desarrollada con tecnologías frontend puras, orientada a la presentación de productos de descanso de alta calidad.
 
-Almohadas 
+Productos comercializados:
 
-Proyecto 100% con HTML5, CSS3 y JavaScript Vanilla, optimizado para performance y accesibilidad.
+* Colchones
+* Sommiers
+* Respaldos
+* Almohadas
 
-✨ Características Técnicas
-✅ Interfaz responsive (Mobile-First)
-✅ Carrito de compras con localStorage
-✅ Filtros de productos dinámicos con JS
-✅ Formulario de contacto con validación
-✅ Integración directa con WhatsApp
-✅ Efectos CSS (hover, transitions)
-✅ Semántica HTML para mejor SEO
+El objetivo del proyecto es ofrecer una experiencia de navegación rápida, accesible y optimizada para dispositivos móviles, permitiendo a los clientes consultar productos y concretar compras mediante WhatsApp.
 
-🛠 Stack Tecnológico
-Frontend	Herramientas
-HTML5 semántico	Git + GitHub
-CSS3 + Flexbox/Grid	Figma (Diseño)
-JavaScript Vanilla	VSCode
-API de WhatsApp	Mobile-First
-🎨 Diseño
-Estilo: Minimalista profesional
+---
 
-Colores:
+# Características
 
-Principal: #1f1f1f (Negro elegante)
+* Catálogo de productos.
+* Carrito de compras persistente mediante localStorage.
+* Integración con WhatsApp.
+* Formularios con validación.
+* Diseño responsive Mobile First.
+* HTML semántico.
+* Optimización SEO.
+* Arquitectura modular en JavaScript Vanilla.
 
-Secundario: #ffffff (Blanco puro)
+---
 
-Acento: #c9a87a (Beige cálido)
+# Stack Tecnológico
 
-Tipografía:
+## Frontend
 
-Títulos: Montserrat (600)
+* HTML5
+* CSS3
+* JavaScript Vanilla
 
-Texto: Open Sans (400)
+## Herramientas
 
-🚀 Cómo Visualizar el Proyecto
-Descargar archivos ZIP o clonar repositorio:
+* Git
+* GitHub
+* VS Code
+* Figma
 
-bash
-git clone https://github.com/laokatana/Directo_de_fabrica
-Abrir index.html en tu navegador.
+---
 
-¡Explora todas las secciones!
+# Arquitectura
 
-📸 Demo Interactiva
-Sección	Descripción
-Inicio	Presentación de productos destacados
-Catálogo	Grid con filtros interactivos
-Producto	Detalle con galería de imágenes
-Carrito	Resumen de compra persistente
-Ver demo online (ejemplo)
+Tipo de aplicación:
 
-📈 Roadmap Futuro
-Añadir modo oscuro automático
+Frontend estático.
 
-Implementar búsqueda en tiempo real
+Modelo de negocio actual:
 
-Integracion de mercado pago
+Cliente
+→ Catálogo
+→ Carrito
+→ WhatsApp
+→ Comercio
 
 👨‍💻 Desarrollador
 Lao Larragueta - Developer
@@ -76,12 +73,183 @@ https://www.linkedin.com/in/lao-larragueta/
 
 https://lao-larragueta.netlify.app/
 
+Actualmente el proyecto no utiliza:
+
+* Backend
+* Base de datos
+* Sistema de autenticación
+* Panel administrativo
+
+La arquitectura está preparada para evolucionar hacia una solución full stack si el negocio lo requiere.
+
+---
+
+# Estructura del Proyecto
+
+```text
+project-root/
+
+AGENTS.md
+BACKLOG.md
+
+docs/
+├── architecture.md
+├── security.md
+
+css/
+js/
+images/
+assets/
+
+index.html
+README.md
+```
+
+---
+
+# Objetivos Técnicos
+
+El proyecto sigue los siguientes principios:
+
+* Mobile First
+* OWASP Top 10
+* SEO Friendly
+* Accesibilidad WCAG AA
+* Código mantenible
+* Arquitectura escalable
+* Performance optimizada
+
+---
+
+# Documentación
+
+## AGENTS.md
+
+Contiene las reglas operativas para agentes de IA y desarrolladores.
+
+Define:
+
+* flujo de trabajo
+* restricciones
+* prioridades técnicas
+* criterios de aprobación
+
+## docs/architecture.md
+
+Describe:
+
+* arquitectura actual
+* organización del proyecto
+* principios arquitectónicos
+* escalabilidad y mantenibilidad
+
+## docs/security.md
+
+Define:
+
+* políticas de seguridad
+* OWASP Top 10
+* validación y sanitización
+* buenas prácticas de desarrollo seguro
+
+## BACKLOG.md
+
+Contiene el plan de mejoras priorizado del proyecto.
+
+---
+
+# Estado Actual
+
+Actualmente se trabaja sobre:
+
+* mejoras de seguridad
+* optimización SEO
+* accesibilidad
+* refactorización de código
+* modularización
+* mejora de performance
+
+---
+
+# Roadmap
+
+## Corto Plazo
+
+* Mejoras OWASP Top 10
+* Accesibilidad WCAG AA
+* Optimización SEO
+* Refactorización modular
+
+## Mediano Plazo
+
+* Dark Mode
+* Optimización de imágenes
+* Métricas Web Vitals
+* Mejoras de UX
+
+## Largo Plazo
+
+* Búsqueda avanzada
+* Panel administrativo
+* Integración con pasarelas de pago
+* Backend opcional
+
+---
+
+# Instalación
+
+Clonar repositorio:
+
+```bash
+git clone https://github.com/laokatana/Directo_de_fabrica.git
+```
+
+Ingresar al proyecto:
+
+```bash
+cd Directo_de_fabrica
+```
+
+Abrir:
+
+```text
+index.html
+```
+
+en cualquier navegador moderno.
+
+---
+
+# Desarrollador
+
+Lao Larragueta
+
+GitHub:
 https://github.com/laokatana
 
-📄 Licencia
-MIT License © 2025 - Libre para uso y adaptación
+LinkedIn:
+https://www.linkedin.com/in/lao-larragueta/
 
-💡 ¿Interesado?
-¡Contáctame para colaboraciones o propuestas laborales!
+Portfolio:
+https://lao-larragueta.netlify.app/
 
 📧 Correo: lao.tech.software@gmail.com
+---
+
+# Licencia
+
+MIT License
+
+© 2025
+
+Libre para uso, modificación y aprendizaje.
+
+---
+
+# Contacto
+
+Correo:
+
+[lao.tech.software@gmail.com](mailto:lao.tech.software@gmail.com)
+
+Para consultas, colaboraciones o propuestas laborales.
