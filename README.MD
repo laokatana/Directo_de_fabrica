@@ -240,7 +240,7 @@ https://lao-larragueta.netlify.app/
 
 MIT License
 
-© 2025
+© 2026
 
 Libre para uso, modificación y aprendizaje.
 

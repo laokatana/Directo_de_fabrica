@@ -1,4 +1,4 @@
-# 🤖 
+# 🤖
 
 # Directo de Fábrica - AGENTS.md
 
@@ -24,10 +24,10 @@ Directo de Fábrica es una tienda online de respaldos de cama y sillones.
 
 El objetivo principal es:
 
-* Mostrar productos de forma profesional.
-* Facilitar consultas y pedidos.
-* Redirigir al cliente al fabricante mediante WhatsApp.
-* Mantener una experiencia rápida, accesible y segura.
+- Mostrar productos de forma profesional.
+- Facilitar consultas y pedidos.
+- Redirigir al cliente al fabricante mediante WhatsApp.
+- Mantener una experiencia rápida, accesible y segura.
 
 ---
 
@@ -35,9 +35,9 @@ El objetivo principal es:
 
 Tecnologías actuales:
 
-* HTML
-* CSS
-* JavaScript
+- HTML
+- CSS
+- JavaScript
 
 Arquitectura:
 
@@ -59,17 +59,17 @@ Solo implementar si existe una necesidad real.
 
 Tecnologías previstas:
 
-* Express
-* PostgreSQL
-* Cloudinary
+- Express
+- PostgreSQL
+- Cloudinary
 
 Posibles funcionalidades futuras:
 
-* Panel administrativo
-* Gestión de productos
-* Gestión de imágenes
-* Gestión de pedidos
-* Integración con pagos
+- Panel administrativo
+- Gestión de productos
+- Gestión de imágenes
+- Gestión de pedidos
+- Integración con pagos
 
 No asumir que estas funcionalidades ya existen.
 
@@ -87,22 +87,22 @@ Antes de realizar cualquier modificación:
 
 Nunca:
 
-* Realizar refactorizaciones masivas sin autorización.
-* Agregar dependencias sin justificar su necesidad.
-* Cambiar la arquitectura sin aprobación.
-* Eliminar funcionalidades existentes sin aprobación.
-* Introducir complejidad innecesaria.
+- Realizar refactorizaciones masivas sin autorización.
+- Agregar dependencias sin justificar su necesidad.
+- Cambiar la arquitectura sin aprobación.
+- Eliminar funcionalidades existentes sin aprobación.
+- Introducir complejidad innecesaria.
 
 ---
 
 ## Convenciones de Desarrollo
 
-* Utilizar nombres descriptivos.
-* Evitar duplicación de código.
-* Mantener funciones pequeñas y legibles.
-* Priorizar legibilidad sobre optimización prematura.
-* Mantener consistencia con el estilo existente del proyecto.
-* Aplicar principios de Clean Code cuando sea apropiado.
+- Utilizar nombres descriptivos.
+- Evitar duplicación de código.
+- Mantener funciones pequeñas y legibles.
+- Priorizar legibilidad sobre optimización prematura.
+- Mantener consistencia con el estilo existente del proyecto.
+- Aplicar principios de Clean Code cuando sea apropiado.
 
 ---
 
@@ -116,11 +116,11 @@ docs/security.md
 
 Principios básicos:
 
-* Nunca usar datos de usuario mediante innerHTML.
-* Validar y sanitizar entradas.
-* Evitar dependencias vulnerables.
-* No exponer información sensible.
-* Revisar riesgos antes de incorporar librerías nuevas.
+- Nunca usar datos de usuario mediante innerHTML.
+- Validar y sanitizar entradas.
+- Evitar dependencias vulnerables.
+- No exponer información sensible.
+- Revisar riesgos antes de incorporar librerías nuevas.
 
 ---
 
@@ -132,10 +132,10 @@ docs/seo.md
 
 Objetivos:
 
-* SEO técnico correcto.
-* Estructura semántica HTML.
-* Metadatos completos.
-* Datos estructurados cuando corresponda.
+- SEO técnico correcto.
+- Estructura semántica HTML.
+- Metadatos completos.
+- Datos estructurados cuando corresponda.
 
 ---
 
@@ -147,10 +147,10 @@ docs/accessibility.md
 
 Objetivos:
 
-* Cumplir WCAG AA.
-* Navegación mediante teclado.
-* Contraste adecuado.
-* Uso correcto de labels y atributos ARIA.
+- Cumplir WCAG AA.
+- Navegación mediante teclado.
+- Contraste adecuado.
+- Uso correcto de labels y atributos ARIA.
 
 ---
 
@@ -162,10 +162,10 @@ docs/mobile-first.md
 
 Principios:
 
-* Diseñar primero para móviles.
-* Escalar progresivamente hacia tablet y desktop.
-* Evitar breakpoints innecesarios.
-* Priorizar rendimiento móvil.
+- Diseñar primero para móviles.
+- Escalar progresivamente hacia tablet y desktop.
+- Evitar breakpoints innecesarios.
+- Priorizar rendimiento móvil.
 
 ---
 
@@ -173,26 +173,26 @@ Principios:
 
 El propietario del proyecto está aprendiendo:
 
-* Desarrollo Frontend
-* Backend
-* Redes
-* Ciberseguridad
+- Desarrollo Frontend
+- Backend
+- Redes
+- Ciberseguridad
 
 Los agentes deben:
 
-* Explicar decisiones importantes.
-* Justificar cambios relevantes.
-* Mostrar alternativas cuando existan.
-* Favorecer la comprensión antes que la automatización.
+- Explicar decisiones importantes.
+- Justificar cambios relevantes.
+- Mostrar alternativas cuando existan.
+- Favorecer la comprensión antes que la automatización.
 
 ---
 
 ## Git y Control de Versiones
 
-* Un cambio lógico por commit.
-* Commits pequeños y descriptivos.
-* Evitar modificar múltiples módulos sin aprobación.
-* No mezclar refactorización con nuevas funcionalidades.
+- Un cambio lógico por commit.
+- Commits pequeños y descriptivos.
+- Evitar modificar múltiples módulos sin aprobación.
+- No mezclar refactorización con nuevas funcionalidades.
 
 ---
 
@@ -200,13 +200,11 @@ Los agentes deben:
 
 Un cambio se considera aceptable únicamente si:
 
-* Funciona correctamente.
-* No rompe funcionalidades existentes.
-* Mantiene compatibilidad móvil.
-* No introduce vulnerabilidades.
-* Respeta accesibilidad.
-* Respeta SEO.
-* Mantiene legibilidad y mantenibilidad.
-* Está alineado con los objetivos del proyecto.
-
-
+- Funciona correctamente.
+- No rompe funcionalidades existentes.
+- Mantiene compatibilidad móvil.
+- No introduce vulnerabilidades.
+- Respeta accesibilidad.
+- Respeta SEO.
+- Mantiene legibilidad y mantenibilidad.
+- Está alineado con los objetivos del proyecto.
