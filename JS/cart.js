@@ -46,10 +46,14 @@ export function buyCartCount() {
 
   // === Renderizar carrito ===
   function renderCart() {
-    cartContent.innerHTML = '';
+    while (cartContent.firstChild) {
+      cartContent.removeChild(cartContent.firstChild);
+    }
 
     if (cartItems.length === 0) {
-      cartContent.innerHTML = '<p>Tu carrito está vacío</p>';
+      const emptyCartMessage = document.createElement('p');
+      emptyCartMessage.textContent = 'Tu carrito está vacío';
+      cartContent.appendChild(emptyCartMessage);
       cartCount.textContent = '0';
       return;
     }
@@ -60,7 +64,10 @@ export function buyCartCount() {
     cartItems.forEach((item, index) => {
       const li = document.createElement('li');
       li.classList.add('cart-item');
-      li.innerHTML = `<span>${item.nombre} - $${item.precio}</span>`;
+
+      const itemText = document.createElement('span');
+      itemText.textContent = `${item.nombre} - $${item.precio}`;
+      li.appendChild(itemText);
 
       const removeBtn = document.createElement('button');
       removeBtn.textContent = '✕';

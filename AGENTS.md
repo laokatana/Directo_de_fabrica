@@ -17,6 +17,55 @@ Prioridades del proyecto (en orden):
 Se prefieren soluciones simples y mantenibles antes que arquitecturas complejas o dependencias innecesarias.
 
 ---
+## Documentación Obligatoria
+
+Antes de analizar, modificar, refactorizar o proponer cambios en el proyecto, todo agente o desarrollador debe revisar la documentación principal.
+
+Orden de lectura:
+
+1. README.md
+2. AGENTS.md
+3. docs/Architecture.md
+4. docs/Security.md
+5. docs/Accessibility.md
+6. docs/Mobile-First.md
+7. docs/SEO.md
+8. docs/Roadmap.md
+
+Reglas:
+
+* No asumir requisitos sin consultar la documentación.
+* No proponer cambios que contradigan la arquitectura definida.
+* No introducir vulnerabilidades que incumplan Security.md.
+* No romper criterios de accesibilidad definidos en Accessibility.md.
+* No ignorar la estrategia Mobile First definida en Mobile-First.md.
+* No implementar cambios que perjudiquen SEO.md.
+* Toda propuesta debe respetar los objetivos definidos en Roadmap.md.
+
+Si existe conflicto entre documentación:
+
+AGENTS.md tiene prioridad sobre cualquier otro documento.
+
+Todo agente debe completar la lectura de esta documentación antes de analizar o modificar código.
+
+## Verificación de Contexto
+
+Antes de comenzar cualquier tarea:
+
+1. Leer documentación obligatoria.
+2. Resumir brevemente el contexto comprendido.
+3. Explicar el plan de acción.
+4. Esperar aprobación cuando corresponda.
+
+No realizar cambios importantes sin confirmar comprensión del contexto.
+
+
+
+
+
+
+
+
 
 ## Objetivo del Proyecto
 

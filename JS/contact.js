@@ -1,6 +1,5 @@
 export function setupContactForm(e) {
   if (!e) {
-    // ← Validación adicional para debug
     console.error('Evento no definido. Revisa cómo llamas a esta función.');
     return;
   }
@@ -16,10 +15,10 @@ export function setupContactForm(e) {
     <span class="spinner"></span> Enviando...
   `;
 
-  // Obtiene valores del formulario
-  const nombre = document.getElementById('nombre').value.trim();
-  const telefono = document.getElementById('telefono').value.trim();
-  const mensaje = document.getElementById('mensaje').value.trim();
+  // Obtiene y sanitiza valores del formulario
+  const nombre = sanitizeInput(document.getElementById('nombre').value);
+  const telefono = sanitizeInput(document.getElementById('telefono').value);
+  const mensaje = sanitizeInput(document.getElementById('mensaje').value);
   const honeypot = document.getElementById('robotito').value.trim();
 
   // Validaciones
@@ -31,6 +30,13 @@ export function setupContactForm(e) {
 
   if (!nombre || !telefono || !mensaje) {
     showAlert('error', 'Por favor, completa todos los campos.');
+    resetForm(submitButton);
+    return;
+  }
+
+  // Validación de formato de teléfono
+  if (!isValidPhone(telefono)) {
+    showAlert('error', 'Teléfono inválido. Incluye al menos 7 dígitos.');
     resetForm(submitButton);
     return;
   }
@@ -63,6 +69,24 @@ export function setupContactForm(e) {
 function resetForm(button) {
   button.disabled = false;
   button.textContent = 'Enviar mensaje';
+}
+
+// Función para sanitizar inputs (previene XSS y URL injection)
+function sanitizeInput(str) {
+  if (typeof str !== 'string') return '';
+
+  return str
+    .trim()
+    .replace(/[<>'"]/g, '') // Elimina caracteres peligrosos
+    .slice(0, 500); //longitud para evitar overflow
+}
+
+// Función para validar formato de teléfono
+function isValidPhone(phone) {
+  // Acepta números, +, -, espacios, paréntesis
+  // Requiere al menos 7 dígitos
+  const regex = /^[\d+\-\s()]{7,}$/;
+  return regex.test(phone);
 }
 
 // Función para mostrar alertas
