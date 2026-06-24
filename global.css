@@ -139,6 +139,17 @@ h6 {
   overflow: hidden;
 }
 
+.home-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -152,7 +163,7 @@ h6 {
 .home-content {
   position: relative;
   z-index: 1;
-  color: rgb(233, 216, 216);
+  color: white;
   text-align: center;
   padding: 0 1rem;
   top: 25%;
@@ -225,7 +236,7 @@ h6 {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  color: rgb(238, 224, 224);
+  color: white;
 }
 
 .about-bg-video {
@@ -243,7 +254,7 @@ h6 {
   z-index: 2;
   padding: 2rem 1rem;
   margin-top: 10%;
-  background: rgba(0, 0, 0, 0.5); /* capa oscura para leer el texto */
+  background: rgba(0, 0, 0, 0.65); /* capa oscura para leer el texto */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -254,7 +265,7 @@ h6 {
 
 .about-title {
   font-size: 2rem;
-  color: #d1c2c2;
+  color: white;
 }
 
 .about-description {
@@ -262,6 +273,7 @@ h6 {
   line-height: 1.6;
   margin-bottom: 1.5rem;
   max-width: 800px;
+  color: white;
 }
 
 .about-button {
@@ -271,7 +283,7 @@ h6 {
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
-  border: 1px solid #d1c2c2;
+  border: 1px solid white;
   transition: background-color 0.3s ease;
 }
 
@@ -279,7 +291,6 @@ h6 {
   background-color: #f1e682;
   border: solid 1px #f1e682;
   color: black;
-  transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
 
@@ -370,7 +381,7 @@ h6 {
 .product-description {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: #555;
+  color: #333;
 }
 
 .product-price {
@@ -383,14 +394,14 @@ h6 {
 
 .add-to-cart-btn {
   background-color: transparent;
-  color: rgb(20, 20, 20);
+  color: #1a1a1a;
   border: none;
   padding: 0.75rem 1.2rem;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
-  border: solid 1px #bbb0b0;
+  border: solid 1px #8a7f7f;
 }
 
 .add-to-cart-btn:hover {
@@ -461,6 +472,15 @@ h2 {
   gap: 1rem;
 }
 
+.contact-form label {
+  display: block;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #1f1f1f;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -468,6 +488,19 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+}
+
+/* Clase para elementos ocultos visualmente pero accesibles para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .contact-form button {
@@ -647,7 +680,7 @@ h2 {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
+  background-color: #1a8c44;
   color: white;
   border-radius: 50%;
   width: 55px;
@@ -753,18 +786,18 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #5a5757;
+  background: #3a3838;
   padding: 8px 12px;
   margin-bottom: 6px;
   border-radius: 6px;
   font-size: 0.9rem;
-  color: #e9dddd;
+  color: white;
 }
 
 .btn-remove {
   background: none;
   border: none;
-  color: #ff4d4d;
+  color: #ff6b6b;
   font-size: 1.2rem;
   cursor: pointer;
   margin-left: 10px;
@@ -772,11 +805,11 @@ h2 {
 }
 
 .btn-remove:hover {
-  color: #cc0000;
+  color: #ff4444;
 }
 
 .btn-whatsapp {
-  background-color: #25d366;
+  background-color: #1a8c44;
   color: white;
   border: none;
   padding: 12px 16px;
@@ -790,5 +823,5 @@ h2 {
 }
 
 .btn-whatsapp:hover {
-  background-color: #1ebe5b;
+  background-color: #157a3a;
 }

@@ -22,9 +22,9 @@ Objetivo de esta etapa:
 
 ---
 
-# 🔴 CRÍTICAS (Sprint 1)
+## 🔴 CRÍTICAS (Sprint 1)
 
-## Seguridad
+### Seguridad
 
 | ID  | Tiempo | Objetivo                                            |
 | --- | ------ | --------------------------------------------------- |
@@ -33,7 +33,7 @@ Objetivo de esta etapa:
 | C-3 | 30 min | Implementar Security Headers (CSP, X-Frame-Options) |
 | C-4 | 25 min | Sanitizar inputs del formulario de contacto         |
 
-## Arquitectura
+### Arquitectura
 
 | ID  | Tiempo | Objetivo                                                           |
 | --- | ------ | ------------------------------------------------------------------ |
@@ -42,9 +42,9 @@ Objetivo de esta etapa:
 
 ---
 
-# 🟠 ALTAS (Sprint 2)
+## 🟠 ALTAS (Sprint 2)
 
-## Accesibilidad
+### Accesibilidad
 
 | ID  | Tiempo | Objetivo                                     |
 | --- | ------ | -------------------------------------------- |
@@ -52,7 +52,7 @@ Objetivo de esta etapa:
 | A-2 | 30 min | Agregar aria-labels a elementos interactivos |
 | A-3 | 45 min | Mejorar contraste de colores                 |
 
-## SEO
+### SEO
 
 | ID  | Tiempo | Objetivo                                       |
 | --- | ------ | ---------------------------------------------- |
@@ -61,40 +61,48 @@ Objetivo de esta etapa:
 | A-6 | 30 min | Configurar lang="es", robots.txt y sitemap.xml |
 | A-7 | 30 min | Mejorar textos ALT de imágenes                 |
 
-## Calidad
+### Calidad
 
 | ID  | Tiempo | Objetivo                         |
 | --- | ------ | -------------------------------- |
 | A-8 | 3 h    | Crear tests unitarios con Vitest |
-| A-9 | 1 h    | Integrar ESLint y Prettier       |
 
 ---
 
-# 🟡 MEDIAS (Sprint 3)
+## 🟡 MEDIAS (Sprint 3)
 
-## UX y Accesibilidad
+### UX y Accesibilidad
 
-| ID  | Tiempo | Objetivo                      |
-| --- | ------ | ----------------------------- |
-| M-1 | 45 min | Agregar estilos focus-visible |
-| M-2 | 2 h    | Agregar subtítulos a videos   |
-| M-3 | 2.5 h  | Implementar Dark Mode         |
+| ID | Tiempo | Objetivo |
+| --- | ------ | -------- |
+| M-1 | 45 min | Agregar estilos `:focus-visible` para navegación por teclado en botones, enlaces e inputs |
+| M-2 | 1.5 h | **Crear menú desplegable para "Productos"** en navbar. Mostrar subcategorías (Respaldos, Sommieres, Almohadas). Accesible y responsive (acordeón en móvil) |
+| M-3 | 2 h | **Implementar slider/carrusel de productos por categoría.** Navegable con mouse (drag) y táctil (touch). Depende de M-2 |
 
-## Responsive
+### Estilos y Temas
+
+| ID | Tiempo | Objetivo |
+| --- | ------ | -------- |
+| M-4 | 1.5 h | Optimizar estilos para pantallas de 320px y 480px |
+| M-5 | 1 h | Mejorar layout y usabilidad del formulario en dispositivos móviles |
+| M-6 | 2.5 h | Implementar Dark Mode con toggle en navbar usando CSS variables |
+| M-7 | 1 h | Rediseñar sección de contacto: Reemplazar formulario por botones de acceso directo a Instagram, WhatsApp y Catálogo. Debe ser responsive, accesible y usar íconos representativos. |
+
+### Responsive
 
 | ID  | Tiempo | Objetivo                                  |
 | --- | ------ | ----------------------------------------- |
 | M-4 | 1.5 h  | Optimizar para pantallas de 320px y 480px |
 | M-5 | 1 h    | Mejorar layout móvil del formulario       |
 
-## Performance
+### Performance
 
 | ID  | Tiempo | Objetivo                                      |
 | --- | ------ | --------------------------------------------- |
 | M-6 | 2 h    | Optimizar imágenes con srcset, picture y WebP |
 | M-7 | 1.5 h  | Monitorizar Core Web Vitals                   |
 
-## Código
+### Código
 
 | ID  | Tiempo | Objetivo                                       |
 | --- | ------ | ---------------------------------------------- |
@@ -103,7 +111,7 @@ Objetivo de esta etapa:
 
 ---
 
-# 🟢 BAJAS (Futuras Iteraciones)
+## 🟢 BAJAS (Futuras Iteraciones)
 
 | ID  | Tiempo | Objetivo                       |
 | --- | ------ | ------------------------------ |
@@ -117,7 +125,7 @@ Objetivo de esta etapa:
 
 ---
 
-# 🔵 FUTURO (NO IMPLEMENTAR TODAVÍA)
+## 🔵 FUTURO (NO IMPLEMENTAR TODAVÍA)
 
 Estas mejoras quedan pendientes hasta que exista una necesidad real de backend:
 
@@ -133,7 +141,7 @@ Estas mejoras quedan pendientes hasta que exista una necesidad real de backend:
 
 ---
 
-# Objetivo de la Fase Actual
+## Objetivo de la Fase Actual
 
 Lograr una tienda online estática profesional:
 

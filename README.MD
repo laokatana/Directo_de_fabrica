@@ -4,13 +4,13 @@ Tienda online para la exhibición y comercialización de productos de descanso d
 
 ## Demo
 
-https://directo-de-fabrica.netlify.app/
+<https://directo-de-fabrica.netlify.app/>
 
 ---
 
-# Descripción
+## Descripción
 
-Directo de Fábrica es una tienda online desarrollada con tecnologías frontend puras, orientada a la presentación de productos de descanso de alta calidad.
+Lorenzo es una tienda online desarrollada con tecnologías frontend puras, orientada a la presentación de productos de descanso de alta calidad.
 
 Productos comercializados:
 
@@ -23,7 +23,7 @@ El objetivo del proyecto es ofrecer una experiencia de navegación rápida, acce
 
 ---
 
-# Características
+## Características
 
 * Catálogo de productos.
 * Carrito de compras persistente mediante localStorage.
@@ -36,7 +36,7 @@ El objetivo del proyecto es ofrecer una experiencia de navegación rápida, acce
 
 ---
 
-# Stack Tecnológico
+## Stack Tecnológico
 
 ## Frontend
 
@@ -49,11 +49,10 @@ El objetivo del proyecto es ofrecer una experiencia de navegación rápida, acce
 * Git
 * GitHub
 * VS Code
-* Figma
 
 ---
 
-# Arquitectura
+## Arquitectura
 
 Tipo de aplicación:
 
@@ -69,9 +68,9 @@ Cliente
 
 👨‍💻 Desarrollador
 Lao Larragueta - Developer
-https://www.linkedin.com/in/lao-larragueta/
+<https://www.linkedin.com/in/lao-larragueta/>
 
-https://lao-larragueta.netlify.app/
+<https://lao-larragueta.netlify.app/>
 
 Actualmente el proyecto no utiliza:
 
@@ -84,7 +83,7 @@ La arquitectura está preparada para evolucionar hacia una solución full stack 
 
 ---
 
-# Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 project-root/
@@ -95,6 +94,11 @@ BACKLOG.md
 docs/
 ├── architecture.md
 ├── security.md
+├── accessibility.md
+├── Architecture.md
+├── Mobile-First.md
+├── Seo.md
+├── Roadmap.md
 
 css/
 js/
@@ -107,7 +111,7 @@ README.md
 
 ---
 
-# Objetivos Técnicos
+## Objetivos Técnicos
 
 El proyecto sigue los siguientes principios:
 
@@ -121,7 +125,7 @@ El proyecto sigue los siguientes principios:
 
 ---
 
-# Documentación
+## Documentación
 
 ## AGENTS.md
 
@@ -158,7 +162,7 @@ Contiene el plan de mejoras priorizado del proyecto.
 
 ---
 
-# Estado Actual
+## Estado Actual
 
 Actualmente se trabaja sobre:
 
@@ -171,7 +175,7 @@ Actualmente se trabaja sobre:
 
 ---
 
-# Roadmap
+## Roadmap
 
 ## Corto Plazo
 
@@ -196,7 +200,7 @@ Actualmente se trabaja sobre:
 
 ---
 
-# Instalación
+## Instalación
 
 Clonar repositorio:
 
@@ -220,23 +224,22 @@ en cualquier navegador moderno.
 
 ---
 
-# Desarrollador
+## Desarrollador
 
 Lao Larragueta
 
 GitHub:
-https://github.com/laokatana
+<https://github.com/laokatana>
 
 LinkedIn:
-https://www.linkedin.com/in/lao-larragueta/
+<https://www.linkedin.com/in/lao-larragueta/>
 
 Portfolio:
-https://lao-larragueta.netlify.app/
+<https://lao-larragueta.netlify.app/>
 
-📧 Correo: lao.tech.software@gmail.com
----
+📧 <Correo: <lao.tech.software@gmail.com>
 
-# Licencia
+## Licencia
 
 MIT License
 
@@ -246,7 +249,7 @@ Libre para uso, modificación y aprendizaje.
 
 ---
 
-# Contacto
+## Contacto
 
 Correo:
 
