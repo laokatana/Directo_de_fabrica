@@ -58,6 +58,15 @@ Antes de comenzar cualquier tarea:
 2. Resumir brevemente el contexto comprendido.
 3. Explicar el plan de acción.
 4. Esperar aprobación cuando corresponda.
+5. Verificar que el código cumpla con ESLint y Prettier.
+
+**Reglas de ESLint y Prettier:**
+
+- Todo código generado o modificado debe pasar las reglas de ESLint y Prettier del proyecto.
+- Antes de proponer cambios, verificá que el código cumpla con el estilo definido.
+- Si encontrás errores de linting, corregilos automáticamente con `npm run lint:fix`.
+- Si encontrás errores de formato, corregilos automáticamente con `npm run format`.
+- Si el proyecto no tiene configurados ESLint o Prettier, proponé una configuración estándar.
 
 No realizar cambios importantes sin confirmar comprensión del contexto.
 

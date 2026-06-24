@@ -61,12 +61,6 @@ Objetivo de esta etapa:
 | A-6 | 30 min | Configurar lang="es", robots.txt y sitemap.xml |
 | A-7 | 30 min | Mejorar textos ALT de imágenes                 |
 
-### Calidad
-
-| ID  | Tiempo | Objetivo                         |
-| --- | ------ | -------------------------------- |
-| A-8 | 3 h    | Crear tests unitarios con Vitest |
-
 ---
 
 ## 🟡 MEDIAS (Sprint 3)

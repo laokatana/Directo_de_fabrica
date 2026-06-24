@@ -18,6 +18,7 @@ export function renderCart() {
     emptyMsg.textContent = 'Tu carrito está vacío';
     cartContent.appendChild(emptyMsg);
     cartCount.textContent = '0';
+    cartCount.classList.add('hidden');
     return;
   }
 
@@ -70,10 +71,16 @@ export function renderCart() {
 
   // Actualizar badge del carrito
   cartCount.textContent = items.length;
+  cartCount.classList.remove('hidden');
 }
 
 export function updateCartBadge() {
   const cartCount = document.getElementById('cart-count');
   const items = getCartItems();
   cartCount.textContent = items.length;
+  if (items.length === 0) {
+    cartCount.classList.add('hidden');
+  } else {
+    cartCount.classList.remove('hidden');
+  }
 }

@@ -38,7 +38,7 @@ h6 {
 .navbar {
   background-color: #1f1f1f;
   color: white;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,30 +51,42 @@ h6 {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  align-items: flex-start;
+  text-align: center;
+  flex: 1;
 }
 
 .menu-toggle {
-  display: block;
+  display: flex;
   background: none;
   border: none;
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .nav-links {
   list-style: none;
   position: absolute;
   top: 100%;
-  right: 0;
+  left: 0;
   background-color: #1f1f1f;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 70%;
   opacity: 0;
-  transform: translateX(5px);
+  transform: translateX(-5px);
   pointer-events: none;
   transition: all 0.3s ease;
   z-index: 100;
@@ -83,7 +95,7 @@ h6 {
 
 .nav-links.open {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
   pointer-events: auto;
 }
 
@@ -99,12 +111,95 @@ h6 {
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
   transition: background 0.3s;
+  display: block;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus-visible {
   background-color: #272626;
   font-size: 1.1rem;
   transition: all 0.3s ease;
+}
+
+/* ========== DROPDOWN / ACORDEÓN ========== */
+
+/* Botón de Productos (mobile y desktop) */
+.nav-dropdown-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  text-align: right;
+  justify-content: flex-end;
+  transition: background 0.3s;
+}
+
+.nav-dropdown-btn:hover {
+  background-color: #272626;
+}
+
+/* Flecha del dropdown */
+.dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.nav-dropdown-btn[aria-expanded='true'] .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Submenú (mobile: acordeón oculto) */
+.nav-submenu {
+  list-style: none;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    padding 0.3s ease;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.nav-submenu.open {
+  max-height: 300px;
+  opacity: 1;
+  padding: 0.5rem 1rem;
+}
+
+.nav-submenu li {
+  padding: 0;
+  text-align: left;
+}
+
+.nav-submenu .submenu-link {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.nav-submenu .submenu-link:hover {
+  background-color: #333;
+  color: white;
 }
 
 /* Pantallas medianas en adelante */
@@ -125,6 +220,98 @@ h6 {
 
   .nav-links li {
     padding: 0;
+  }
+
+  /* Espaciado entre enlaces del navbar en desktop */
+  .nav-links {
+    gap: 28px;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 1rem;
+  }
+
+  /* === DROPDOWN DESKTOP === */
+
+  /* El contenedor del dropdown necesita position relative para que el submenú se posicione debajo */
+  .nav-item-dropdown {
+    position: relative;
+  }
+
+  /* Botón Productos en desktop: mismo padding que los links */
+  .nav-dropdown-btn {
+    padding: 0.5rem 0.75rem;
+    width: auto;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  /* Submenú en desktop: panel flotante absoluto */
+  .nav-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease,
+      padding 0.3s ease;
+    z-index: 200;
+  }
+
+  .nav-submenu.open {
+    max-height: 300px;
+    opacity: 1;
+    padding: 0.5rem 0;
+  }
+
+  .nav-submenu li {
+    text-align: left;
+  }
+
+  .nav-submenu .submenu-link {
+    padding: 0.6rem 1.25rem;
+    color: #ddd;
+    white-space: nowrap;
+  }
+
+  .nav-submenu .submenu-link:hover {
+    background-color: #3a3a3a;
+    color: white;
+  }
+}
+
+/* ========== CATEGORÍAS DE PRODUCTOS ========== */
+
+.product-category {
+  margin-bottom: 3rem;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color: #1f1f1f;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.category-empty {
+  color: #888;
+  font-style: italic;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .category-title {
+    font-size: 1.75rem;
   }
 }
 
@@ -158,6 +345,30 @@ h6 {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+}
+
+/* Focus visible styles for keyboard navigation (WCAG 2.1 AA) */
+/* Fallback para navegadores antiguos */
+:focus {
+  outline: 3px solid #b35900;
+  outline-offset: 3px;
+}
+
+/* Ocultar el outline en clics de mouse (navegadores modernos) */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Estilo visible solo para navegación por teclado */
+:focus-visible {
+  outline: 3px solid #b35900;
+  outline-offset: 3px;
+}
+
+/* Asegurar que elementos con tabindex también reciban el estilo */
+[tabindex]:focus-visible {
+  outline: 3px solid #b35900;
+  outline-offset: 3px;
 }
 
 .home-content {
@@ -711,9 +922,49 @@ h2 {
   background: none;
   border: none;
   color: white;
-  font-size: 1.5rem;
   cursor: pointer;
-  margin-left: 1rem;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.cart-toggle:hover,
+.cart-toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+#cart-count {
+  background-color: #b35900;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  line-height: 1;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  pointer-events: none;
+}
+
+#cart-count.hidden {
+  display: none;
 }
 
 .cart-sidebar {
@@ -757,9 +1008,30 @@ h2 {
 }
 
 @media (min-width: 768px) {
-  .cart-toggle {
-    font-size: 1.25rem;
+  .navbar {
+    padding: 1rem;
   }
+
+  .logo {
+    flex: 0;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .cart-toggle {
+    min-width: auto;
+    min-height: auto;
+    padding: 0.5rem 0.8rem;
+  }
+
+  #cart-count {
+    top: 0;
+    right: 0;
+  }
+
   .cart-sidebar {
     width: 350px;
   }
