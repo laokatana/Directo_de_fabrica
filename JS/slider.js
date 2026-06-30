@@ -333,10 +333,12 @@ export default function setupSlider() {
     const price = parseFloat(
       priceText.replace('$', '').replace('.', '').trim()
     );
+    const img = slide.querySelector('.product-img');
+    const imagen = img ? img.getAttribute('src') : '';
 
     // Usar la función global expuesta por cart.js
     if (typeof window.addToCart === 'function') {
-      window.addToCart({ nombre: title, precio: price });
+      window.addToCart({ nombre: title, precio: price, imagen: imagen });
     }
   });
 

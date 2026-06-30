@@ -7,7 +7,8 @@ export default function setupCart() {
   const cartSidebar = document.getElementById('cart-sidebar');
 
   // Toggle con el botón 🛒
-  cartToggle.addEventListener('click', () => {
+  cartToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     cartSidebar.classList.toggle('open');
   });
 
@@ -16,6 +17,21 @@ export default function setupCart() {
     if (e.key === 'Escape') {
       cartSidebar.classList.remove('open');
     }
+  });
+
+  // Cerrar carrito al hacer clic fuera del sidebar
+  document.addEventListener('click', (e) => {
+    if (!cartSidebar.classList.contains('open')) return;
+    if (!cartSidebar.contains(e.target) && !cartToggle.contains(e.target)) {
+      cartSidebar.classList.remove('open');
+    }
+  });
+
+  // Cerrar carrito al hacer clic en cualquier enlace del navbar
+  document.querySelectorAll('.nav-links a, .submenu-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      cartSidebar.classList.remove('open');
+    });
   });
 }
 
@@ -40,7 +56,7 @@ export function buyCartCount() {
 
     const btn = card.querySelector('.add-to-cart-btn');
     btn.addEventListener('click', () => {
-      addToCart({ nombre: title, precio: price });
+      addToCart({ nombre: title, precio: price, imagen: '' });
       renderCart();
     });
   });

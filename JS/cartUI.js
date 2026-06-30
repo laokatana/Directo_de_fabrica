@@ -36,7 +36,8 @@ export function renderCart() {
     const removeBtn = document.createElement('button');
     removeBtn.textContent = '✕';
     removeBtn.classList.add('btn-remove');
-    removeBtn.addEventListener('click', () => {
+    removeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       removeFromCart(index);
       renderCart();
     });
@@ -60,9 +61,20 @@ export function renderCart() {
   checkoutBtn.classList.add('btn-whatsapp');
   checkoutBtn.addEventListener('click', () => {
     const mensaje = items
-      .map((item) => `- ${item.nombre} (${formatPrice(item.precio)})`)
+      .map((item) => {
+        const linea = `- ${item.nombre} (${formatPrice(item.precio)})`;
+        if (item.imagen) {
+          // Construir URL absoluta si es relativa
+          const baseUrl = window.location.origin;
+          const imagenUrl = item.imagen.startsWith('http')
+            ? item.imagen
+            : `${baseUrl}${item.imagen}`;
+          return `${linea}%0A  Imagen: ${imagenUrl}`;
+        }
+        return linea;
+      })
       .join('%0A');
-    const whatsappMsg = `Hola! me gustaria saber si hay stock y que colores tienen para efectuar la compra de los siguientes productos:%0A${mensaje}%0A%0ATotal: ${formatPrice(total)}`;
+    const whatsappMsg = `Hola! Me gustaría saber si hay stock y qué colores tienen para efectuar la compra de los siguientes productos:%0A${mensaje}%0A%0ATotal: ${formatPrice(total)}`;
     const whatsappUrl = `${WHATSAPP_BASE_URL}${WHATSAPP_NUMBER}?text=${whatsappMsg}`;
     window.open(whatsappUrl, '_blank');
   });
