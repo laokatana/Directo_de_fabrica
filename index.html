@@ -311,8 +311,44 @@
       <section class="products-section" id="products">
         <h2 class="section-title">Nuestros Productos</h2>
 
-        <!-- Categoría: Respaldos -->
-        <div class="product-category" id="respaldos">
+        <!-- SLIDER DE PRODUCTOS POR CATEGORÍA (M-3) -->
+        <div class="product-slider" id="product-slider">
+          <h3 class="category-title" id="slider-category-title">Respaldos</h3>
+
+          <div class="slider-container">
+            <button
+              class="slider-arrow slider-arrow--prev"
+              id="slider-prev"
+              aria-label="Anterior"
+              aria-disabled="true"
+              disabled
+            >
+              &#10094;
+            </button>
+
+            <div class="slider-viewport">
+              <div class="slider-track" id="slider-track"></div>
+            </div>
+
+            <button
+              class="slider-arrow slider-arrow--next"
+              id="slider-next"
+              aria-label="Siguiente"
+            >
+              &#10095;
+            </button>
+          </div>
+
+          <div
+            class="slider-dots"
+            id="slider-dots"
+            role="tablist"
+            aria-label="Diapositivas"
+          ></div>
+        </div>
+
+        <!-- Categorías originales (ocultas visualmente, se mantienen para SEO y anclaje) -->
+        <div class="product-category" id="respaldos" hidden>
           <h3 class="category-title">Respaldos</h3>
           <div class="products-grid">
             <div class="product-card">
@@ -384,7 +420,7 @@
         </div>
 
         <!-- Categoría: Sommieres -->
-        <div class="product-category" id="sommieres">
+        <div class="product-category" id="sommieres" hidden>
           <h3 class="category-title">Sommieres</h3>
           <div class="products-grid">
             <p class="category-empty">Próximamente</p>
@@ -392,7 +428,7 @@
         </div>
 
         <!-- Categoría: Almohadas -->
-        <div class="product-category" id="almohadas">
+        <div class="product-category" id="almohadas" hidden>
           <h3 class="category-title">Almohadas</h3>
           <div class="products-grid">
             <div class="product-card">
@@ -410,7 +446,7 @@
         </div>
 
         <!-- Categoría: Colchones -->
-        <div class="product-category" id="colchones">
+        <div class="product-category" id="colchones" hidden>
           <h3 class="category-title">Colchones</h3>
           <div class="products-grid">
             <p class="category-empty">Próximamente</p>
