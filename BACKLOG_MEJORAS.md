@@ -91,7 +91,7 @@ Objetivo de esta etapa:
 
 | ID  | Tiempo | Objetivo                                       |
 | --- | ------ | ---------------------------------------------- |
-| N-1 | 1.5 h  | Refactorizar navbar.js y extraer menuToggle.js |
+| N-1 | 1.5 h  | Implementar pantalla de carga.                 |
 | N-2 | 1 h    | Implementar manejo global de errores           |
 
 ---

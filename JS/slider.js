@@ -73,8 +73,9 @@ let filteredProducts = [];
 /**
  * Filtra productos por categoría y renderiza el slider.
  * @param {string} categoria - Nombre de la categoría (respaldos, sommiers, almohadas, colchones)
+ * @param {boolean} [shouldScroll=false] - Si es true, hace scroll suave hasta el slider.
  */
-export function filterByCategory(categoria) {
+export function filterByCategory(categoria, shouldScroll = false) {
   currentSlide = 0;
 
   // Filtrar productos
@@ -136,8 +137,10 @@ export function filterByCategory(categoria) {
   updateArrows();
   updateDots();
 
-  // Hacer scroll suave hasta el slider
-  sliderSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Hacer scroll suave hasta el slider (solo cuando se invoca desde clic en el menú)
+  if (shouldScroll) {
+    sliderSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 /**

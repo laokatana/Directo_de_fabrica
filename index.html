@@ -66,6 +66,12 @@
     <script type="module" src="./JS/main.js" defer></script>
     <title>Lorenzo</title>
 
+    <!-- Core Web Vitals monitoring (M-7) -->
+    <script type="module" src="./JS/vitals.js" defer></script>
+
+    <!-- Manejo global de errores (N-2) -->
+    <script type="module" src="./JS/errorHandler.js" defer></script>
+
     <!-- Schema.org JSON-LD: Organization / LocalBusiness -->
     <script type="application/ld+json">
       {
@@ -171,6 +177,21 @@
   </head>
 
   <body class="julius-sans-one-regular">
+    <!-- N-1: Splash Screen / Pantalla de carga -->
+    <div class="splash-overlay" id="splash-overlay" role="status" aria-live="polite">
+      <div class="splash-content">
+        <img
+          src="assets/pictures/armchair.svg"
+          alt="Lorenzo - Directo de Fábrica"
+          class="splash-logo"
+          width="80"
+          height="80"
+        />
+        <div class="splash-spinner" aria-label="Cargando..." role="img"></div>
+        <p class="splash-text">Cargando...</p>
+      </div>
+    </div>
+
     <!------------------------- NAVBAR ----------------------------------------------->
 
     <nav class="navbar" aria-label="Navegación principal">
@@ -459,7 +480,7 @@
         <div class="contact-actions">
           <!-- Instagram -->
           <a
-            href="https://www.instagram.com/lorenzo_respaldos/"
+            href="https://www.instagram.com/lorenzo.colchones/"
             target="_blank"
             rel="noopener noreferrer"
             class="contact-btn contact-btn--instagram"
@@ -483,7 +504,7 @@
 
           <!-- WhatsApp -->
           <a
-            href="https://wa.me/541130510931"
+            href="https://wa.me/541131786313?text=Hola!%20%F0%9F%91%8B%20Me%20gustar%C3%ADa%20contactar%20con%20ustedes%20para%20efectuar%20una%20compra.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20productos%20y%20la%20disponibilidad%20de%20stock."
             target="_blank"
             rel="noopener noreferrer"
             class="contact-btn contact-btn--whatsapp"

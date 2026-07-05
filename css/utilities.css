@@ -14,3 +14,77 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+/* ============================================
+   N-1: SPLASH SCREEN (Pantalla de carga)
+   ============================================ */
+
+/* Overlay que cubre toda la pantalla */
+.splash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-dark, #1f1f1f);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Estado oculto: se aplica con JS cuando la carga termina */
+.splash-overlay.splash-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Contenedor del contenido del splash */
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Logo del splash */
+.splash-logo {
+  width: 80px;
+  height: 80px;
+  animation: splashPulse 1.5s ease-in-out infinite;
+}
+
+/* Animación de pulso para el logo */
+@keyframes splashPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Spinner animado (CSS puro) */
+.splash-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  border-top-color: var(--accent-color, #cfca9e);
+  border-radius: 50%;
+  animation: splashSpin 0.8s linear infinite;
+}
+
+@keyframes splashSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Texto "Cargando..." */
+.splash-text {
+  color: var(--text-light, #ffffff);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
