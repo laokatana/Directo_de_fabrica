@@ -29,6 +29,17 @@ export default function setupNavbar() {
     });
   });
 
+  // Cerrar menú al tocar el carrito
+  const cartToggle = document.getElementById('cart-toggle');
+  if (cartToggle) {
+    cartToggle.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+      menuToggle.setAttribute('aria-label', 'Abrir menú de navegación');
+    });
+  }
+
   // Cerrar si se hace click fuera del menú
   document.addEventListener('click', (event) => {
     const isClickInside =

@@ -1,0 +1,190 @@
+/* ============================================
+   LAYOUT - Estructura general, footer, secciones
+   ============================================ */
+
+/* Categorías de productos */
+.product-category {
+  margin-bottom: 3rem;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color: #1f1f1f;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.category-empty {
+  color: #888;
+  font-style: italic;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .category-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Sección de productos */
+.products-section {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 6rem;
+}
+
+.products-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .products-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Close menu */
+.close-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+  text-align: right;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .close-menu {
+    display: none;
+  }
+}
+
+/* FOOTER */
+.footer {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.8rem 0;
+}
+
+.footer-links a {
+  color: var(--text-gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--text-light);
+}
+
+.developer-credit {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.credit-text {
+  color: var(--text-gray);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.developer-name {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.dev-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  transition:
+    transform 0.3s,
+    fill 0.3s;
+}
+
+.dev-links a:hover .icon {
+  transform: scale(1.15);
+}
+
+@media (min-width: 768px) {
+  .developer-credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .credit-text {
+    margin-bottom: 0;
+    order: -1;
+  }
+}
+
+/* Botón WhatsApp flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1a8c44;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .footer-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+}

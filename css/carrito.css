@@ -1,0 +1,153 @@
+/* ============================================
+   CARRITO - Sidebar, botón, contador, items
+   ============================================ */
+
+.cart-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.cart-toggle:hover,
+.cart-toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+#cart-count {
+  background-color: #b35900;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  line-height: 1;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  pointer-events: none;
+}
+
+#cart-count.hidden {
+  display: none;
+}
+
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: auto;
+  background-color: #1f1f1f;
+  color: white;
+  transition: right 0.3s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.cart-content {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+#close-cart {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3a3838;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.2s ease;
+}
+
+.btn-remove:hover {
+  color: #ff4444;
+}
+
+.btn-whatsapp {
+  background-color: #1a8c44;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  width: 100%;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #157a3a;
+}
+
+@media (min-width: 768px) {
+  .cart-toggle {
+    min-width: auto;
+    min-height: auto;
+    padding: 0.5rem 0.8rem;
+  }
+
+  #cart-count {
+    top: 0;
+    right: 0;
+  }
+
+  .cart-sidebar {
+    width: 350px;
+  }
+}

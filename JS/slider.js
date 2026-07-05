@@ -11,7 +11,7 @@ const productos = [
     nombre: 'Respaldo Eco cuero',
     precio: 18000,
     imagen:
-      '/assets/pictures/Grande/respaldo grande dos plazas ecocuero blanco.jpeg',
+      './assets/pictures/Grande/respaldo grande dos plazas ecocuero blanco.jpeg',
     categoria: 'respaldos',
     descripcion: 'Respaldo de madera, de 2 plazas.',
     stock: true
@@ -20,7 +20,8 @@ const productos = [
     id: 2,
     nombre: 'Respaldo Canelones pana',
     precio: 22500,
-    imagen: '/assets/pictures/Grande/respaldo grande dos plazas canelones.jpeg',
+    imagen:
+      './assets/pictures/Grande/respaldo grande dos plazas canelones.jpeg',
     categoria: 'respaldos',
     descripcion: 'Respaldo de madera, de 2 plazas.',
     stock: true
@@ -30,7 +31,7 @@ const productos = [
     nombre: 'Respaldo Chenille',
     precio: 22500,
     imagen:
-      '/assets/pictures/Grande/respaldo grande dos plazas chenille negro.jpeg',
+      './assets/pictures/Grande/respaldo grande dos plazas chenille negro.jpeg',
     categoria: 'respaldos',
     descripcion: 'Respaldo de madera de 2 plazas.',
     stock: true
@@ -39,7 +40,8 @@ const productos = [
     id: 4,
     nombre: 'Respaldo Chenille',
     precio: 22500,
-    imagen: '/assets/pictures/mediano/respaldo una plaza y media chenille.jpeg',
+    imagen:
+      './assets/pictures/mediano/respaldo una plaza y media chenille.jpeg',
     categoria: 'respaldos',
     descripcion: 'Respaldo de madera de Plaza 1/2.',
     stock: true
@@ -48,7 +50,7 @@ const productos = [
     id: 5,
     nombre: 'Respaldo Eco cuero',
     precio: 22500,
-    imagen: '/assets/pictures/chico/respaldorosa.jpeg',
+    imagen: './assets/pictures/chico/respaldorosa.jpeg',
     categoria: 'respaldos',
     descripcion: 'Respaldo de madera de 1 Plaza.',
     stock: true
@@ -57,7 +59,7 @@ const productos = [
     id: 6,
     nombre: 'Almohada',
     precio: 22500,
-    imagen: '/assets/pictures/almohada clasica.jpeg',
+    imagen: './assets/pictures/almohada clasica.jpeg',
     categoria: 'almohadas',
     descripcion: 'Viscoelastica clasica.',
     stock: true
