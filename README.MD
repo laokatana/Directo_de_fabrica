@@ -4,7 +4,7 @@ Tienda online para la exhibición y comercialización de productos de descanso d
 
 ## Demo
 
-<https://directo-de-fabrica.netlify.app/>
+<https://lorenzocolchones.netlify.app/>
 
 ---
 

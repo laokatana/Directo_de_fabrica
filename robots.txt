@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /assets/
 
-Sitemap: https://directo-de-fabrica.netlify.app/sitemap.xml
+Sitemap: https://lorenzocolchones.netlify.app/sitemap.xml
