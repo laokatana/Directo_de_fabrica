@@ -2,7 +2,6 @@ import setupNavbar from './navbar.js';
 import about from './about.js';
 import setupCart from './cart.js';
 import { buyCartCount } from './cart.js';
-import { setupContactForm } from './contact.js';
 import setupSlider, { filterByCategory } from './slider.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,10 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
         filterByCategory(category);
       }
     });
-  });
-
-  const form = document.querySelector('.contact-form');
-  form.addEventListener('submit', (e) => {
-    setupContactForm(e);
   });
 });

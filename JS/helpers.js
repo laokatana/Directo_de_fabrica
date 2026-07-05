@@ -40,6 +40,7 @@ export function formatPrice(price) {
  * Muestra una alerta visual en el formulario de contacto
  * @param {'success' | 'error'} type - Tipo de alerta
  * @param {string} message - Mensaje a mostrar
+ * @deprecated El formulario de contacto fue reemplazado en M-5.
  */
 export function showAlert(type, message) {
   const alertDiv = document.createElement('div');
@@ -86,6 +87,7 @@ export function playSuccessSound() {
 /**
  * Resetea el botón de envío del formulario
  * @param {HTMLButtonElement} button
+ * @deprecated El formulario de contacto fue reemplazado en M-5.
  */
 export function resetFormButton(button) {
   if (!button) return;

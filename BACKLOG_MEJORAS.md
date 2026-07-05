@@ -78,15 +78,7 @@ Objetivo de esta etapa:
 | ID | Tiempo | Objetivo |
 | --- | ------ | -------- |
 | M-4 | 1.5 h | Optimizar estilos para pantallas de 320px y 480px |
-| M-5 | 2.5 h | Implementar Dark Mode con toggle en navbar usando CSS variables |
-| M-6 | 1 h | Rediseñar sección de contacto: Reemplazar formulario por botones de acceso directo a Instagram, WhatsApp y Catálogo. Debe ser responsive, accesible y usar íconos representativos. |
-
-### Responsive
-
-| ID  | Tiempo | Objetivo                                  |
-| --- | ------ | ----------------------------------------- |
-| M-4 | 1.5 h  | Optimizar para pantallas de 320px y 480px |
-| M-5 | 1 h    | Mejorar layout móvil del formulario       |
+| M-5 | 1 h | Rediseñar sección de contacto: Reemplazar formulario por botones de acceso directo a Instagram, WhatsApp y Catálogo. Debe ser responsive, accesible y usar íconos representativos. |
 
 ### Performance
 
@@ -99,8 +91,8 @@ Objetivo de esta etapa:
 
 | ID  | Tiempo | Objetivo                                       |
 | --- | ------ | ---------------------------------------------- |
-| M-8 | 1.5 h  | Refactorizar navbar.js y extraer menuToggle.js |
-| M-9 | 1 h    | Implementar manejo global de errores           |
+| N-1 | 1.5 h  | Refactorizar navbar.js y extraer menuToggle.js |
+| N-2 | 1 h    | Implementar manejo global de errores           |
 
 ---
 

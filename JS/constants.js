@@ -7,9 +7,6 @@ export const WHATSAPP_BASE_URL = 'https://wa.me/';
 // Carrito
 export const CART_STORAGE_KEY = 'cartItems';
 
-// Contacto
-export const CONTACT_WHATSAPP_NUMBER = '1130510931';
-
 // Límites
 export const MAX_INPUT_LENGTH = 500;
 export const MIN_PHONE_DIGITS = 7;
@@ -20,7 +17,6 @@ export const SELECTORS = {
   cartCount: '#cart-count',
   cartToggle: 'cart-toggle',
   cartSidebar: 'cart-sidebar',
-  contactForm: '.contact-form',
   productCard: '.product-card',
   productTitle: '.product-title',
   productPrice: '.product-price',
