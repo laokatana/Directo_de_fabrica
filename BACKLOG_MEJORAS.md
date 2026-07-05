@@ -78,9 +78,8 @@ Objetivo de esta etapa:
 | ID | Tiempo | Objetivo |
 | --- | ------ | -------- |
 | M-4 | 1.5 h | Optimizar estilos para pantallas de 320px y 480px |
-| M-5 | 1 h | Mejorar layout y usabilidad del formulario en dispositivos móviles |
-| M-6 | 2.5 h | Implementar Dark Mode con toggle en navbar usando CSS variables |
-| M-7 | 1 h | Rediseñar sección de contacto: Reemplazar formulario por botones de acceso directo a Instagram, WhatsApp y Catálogo. Debe ser responsive, accesible y usar íconos representativos. |
+| M-5 | 2.5 h | Implementar Dark Mode con toggle en navbar usando CSS variables |
+| M-6 | 1 h | Rediseñar sección de contacto: Reemplazar formulario por botones de acceso directo a Instagram, WhatsApp y Catálogo. Debe ser responsive, accesible y usar íconos representativos. |
 
 ### Responsive
 
